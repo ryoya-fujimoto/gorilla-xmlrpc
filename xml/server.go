@@ -82,7 +82,7 @@ func (c *CodecRequest) Method() (string, error) {
 		}
 
 		r := []rune(c.request.Method)
-		r[0] = unicode.ToLower(r[0])
+		r[0] = unicode.ToUpper(r[1])
 
 		return fmt.Sprint(ms[0], ".", string(r)), nil
 	}
